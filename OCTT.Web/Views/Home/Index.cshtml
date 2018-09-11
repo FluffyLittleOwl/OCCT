@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+@section styles {
+    <link type="text/css" rel="stylesheet" href="~/original/css/home.index.css" asp-append-version="true" />
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/original/js/home.index.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        /* dev & debug area */
+    </script>
+}
+
+<div class="datatable-title-bar">
+    <span>О проекте</span>
+</div>
+<div class="about-project-wrap">
+    <span>Обе страницы с "Ajax" и "POST" методами доступны через меню в верхнем левом углу.</span>
+    <span>Используемая версия SQL Server 2016, cтрока для подключения к серверу настраивается через файлы <b>appsettings.json</b> отдельно, как для web части, так и для консольного приложения.</span>
+    <span>Для консолького приложения (<b>OCTT.Reader</b>) в конфиге можно указать более двух rss-лент из задания, сколь долго они доступны и не нарушают соглашения об их содержимом (как это делает Интерфакс).</span>
+    <span>Страницы должны корректно отображаються в Edge и Firefox, Vivaldi(Chromium/Blink) и Chrome</span>
+</div>
+
+

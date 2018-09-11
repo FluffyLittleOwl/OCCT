@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+@section styles {
+    <link type="text/css" rel="stylesheet" href="~/resources/dataTables/css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/original/css/home.viewajaxmethod.css" asp-append-version="true" />
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/resources/dataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/original/js/home.viewajaxmethod.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        /* dev & debug area */
+    </script>
+}
+
+<div class="datatable-title-bar">
+    <span>RSS Feed (Новостная лента, Ajax method)</span>
+</div>
+<div class="datatable-control-aids">
+    <div>
+        <span>Источник ленты</span>
+        <select id="feed-source">
+            <option value="0">Все</option>
+        </select>
+    </div>
+    <div class="dataTable-sort-order">
+        <div>
+            <span>Сортировать по дате</span>
+            <input type="radio" name="sortOrder" value="PubDate" />
+        </div>
+        <div>
+            <span>Сортировать по источнику</span>
+            <input type="radio" name="sortOrder" value="Source" />
+        </div>
+    </div>
+</div>
+<div class="datatable-plugin-wrap">
+    <table id="rssData" class="display" width="100%"></table>
+    <div id="about-tools">
+    </div>
+</div>
+

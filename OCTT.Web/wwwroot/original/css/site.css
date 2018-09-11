@@ -1,0 +1,120 @@
+﻿/* Some common staff */
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.page-content {
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page-top {
+    background-color: #444;
+    border-bottom: 2px solid #111;
+    min-height: 1.5em;
+    margin: 0.1em;
+    padding-right: 0.1em;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: 2em;
+}
+
+.page-top span {
+    color: azure;
+    margin-right: 0.1em;
+    align-self: center;
+}
+
+.page-bottom {
+    background-color: #444;
+    border-top: 2px solid #111;
+    margin: 0.1em;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.page-middle {
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.page-middle-left {
+    background-color: #444;
+    border-right: 2px solid #111;
+    margin: 0.1em;
+    padding-right: 0.1em;
+    
+    display: inline-flex;
+    flex-direction: row;
+    flex-basis: 2em;
+}
+
+.page-middle-central {
+    display: inline-flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.page-middle-right {
+    background-color: #444;
+    border-left: 2px solid #111;
+    margin: 0.1em;
+    padding-right: 0.1em;
+    
+    display: inline-flex;
+    flex-direction: row;
+    flex-basis: 2em;
+}
+
+/* vertical sidr menu button */
+.page-top a#page-selection-menu-button {
+    color: azure;
+    text-decoration: none;
+    margin-left: 0.5em;
+    padding: 0.1em;
+    align-self: center;
+}
+
+/* adjust sidr menu bar a bit */
+.page-middle #page-selection-menu.sidr.left {
+     width: 10em;
+}
+
+.page-middle #page-selection-menu.sidr.left ul > li {
+    line-height: 3em;
+}
+
+.page-middle #page-selection-menu.sidr.left li > a {
+    color: azure;
+    text-decoration: none;
+}
+
+/* something also in common for all views based on _Layout */
+
+.page-rendered-view {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none;
+}
+

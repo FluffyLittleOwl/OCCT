@@ -1,0 +1,29 @@
+﻿.datatable-title-bar {
+    background-color: #444;
+    border-bottom: 2px solid #111;
+    margin: 0.1em;
+    padding-right: 0.1em;
+}
+
+.datatable-title-bar > span {
+    padding: 0.1em;
+    color: azure;
+    margin-left: 0.5em;
+}
+
+/* something was supposed to be also in common for all views based on _Layout but is not */
+.page-rendered-view {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.page-rendered-view > div {
+    display: inline-flex !important;
+    flex-direction: row;
+}
+
+.about-project-wrap {
+    padding: 0.5em;
+    flex-direction: column !important;
+}

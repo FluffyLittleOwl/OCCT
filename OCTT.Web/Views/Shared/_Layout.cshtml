@@ -1,0 +1,62 @@
+﻿@{ 
+    // could be replaced with a proper model, perhaps?
+    var paths = new[]
+    {
+        new { Href = "home", Title = "Home" }, // some weird behavior with href=""
+        new { Href = "viewajaxmethod", Title = "Ajax Method "},
+        new { Href = "viewpostmethod", Title = "Post Method "}
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <!--skipping <enviroment names="Development"></enviroment> implementations staff because I lack time -->
+    <link type="text/css" rel="stylesheet" href="~/resources/sidr/stylesheets/jquery.sidr.dark.css" />
+    <link type="text/css" rel="stylesheet" href="~/original/css/site.css" />
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <div class="page-content">
+        <div class="page-top">
+            <a id="page-selection-menu-button" href="#page-selection-menu">☰ Menu</a><!-- for opening sidr menu -->
+            <span>All kinds of things I found useful to keep in one place!</span>
+        </div>
+        <div class="page-middle">
+            <div class="page-middle-left">
+                <!--TODO: move outside page-content & append here later => should look even less messy-->
+                <div id="page-selection-menu" class="hidden"><!-- template for sidr menu content -->
+                    <ul><!--The menu is here-->
+                        <li><a class="close-menu-button">Back</a></li>
+                        <hr />
+                        @foreach (var path in paths) {
+                            <li><a href=@path.Href>@path.Title</a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="page-middle-central">
+                <div class="page-rendered-view">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="page-middle-right"></div>
+        </div>
+        <div class="page-bottom">
+            <span>FluffyLittleOwl, @DateTime.Now.Year</span>
+        </div>
+    </div>
+    <!-- again, skipping <enviroment/> -->
+    <script type="text/javascript" src="~/resources/jquery/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="~/resources/sidr/jquery.sidr.js"></script>
+    <script type="text/javascript" src="~/original/js/tools.menu.js"></script>
+    <script type="text/javascript" src="~/original/js/site.js"></script>
+    <script type="text/javascript">
+        /* dev & debug area */
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

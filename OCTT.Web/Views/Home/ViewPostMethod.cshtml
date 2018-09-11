@@ -1,0 +1,79 @@
+﻿@model OCTT.Web.Models.ViewPostMethodModel
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_Layout";
+}
+
+@section styles {
+    <link type="text/css" rel="stylesheet" href="~/resources/dataTables/css/jquery.dataTables.min.css" />
+    <link type="text/css" rel="stylesheet" href="~/original/css/home.viewpostmethod.css" asp-append-version="true" />
+}
+
+@section scripts {
+    <script type="text/javascript" src="~/resources/dataTables/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="~/original/js/home.viewpostmethod.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        /* dev & debug area */
+    </script>
+}
+
+<div class="datatable-title-bar">
+    <span>RSS Feed (Новостная лента, Post method)</span>
+</div>
+<div class="datatable-control-aids">
+    <div>
+        <div class="datatable-feed-source">
+            <span>Источник ленты</span>
+            <select id="feed-source">
+                <option value="0">Все</option>
+                @{
+                    foreach (var pair in Model.Feeds)
+                    {
+                        <option value=@pair.Key.ToString()>@pair.Value</option>
+                    }
+                }
+            </select>
+        </div>
+        <div class="datatablee-page-choice">
+            <span>Текущая страница</span>
+            <select id="page-choice">
+                @{
+                    for (var i = 1; i <= Model.PageControl.TotalPages; i++)
+                    {
+                        <option value=@i>@i</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+    <div class="dataTable-sort-order">
+        <div>
+            <span>Сортировать по дате</span>
+            <input type="radio" name="sortOrder" value="PubDate" />
+        </div>
+        <div>
+            <span>Сортировать по источнику</span>
+            <input type="radio" name="sortOrder" value="Source" />
+        </div>
+    </div>
+</div>
+<div class="datatable-plugin-wrap">
+    <table id="rssData" class="display" width="100%">
+        <tbody>
+            @foreach (var record in Model.Records)
+            {
+            <tr>
+                <td>@record.RecordId</td>
+                <td>@record.Feed.Name</td>
+                <td>@Html.Raw(record.Title)</td>
+                <td>@Html.Raw(record.Summary)</td>
+                <td>@record.PubDate.ToString()</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <div id="about-tools">
+    </div>
+</div>
+
+

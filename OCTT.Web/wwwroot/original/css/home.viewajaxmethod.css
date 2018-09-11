@@ -1,0 +1,61 @@
+﻿.datatable-title-bar {
+    background-color: #444;
+    border-bottom: 2px solid #111;
+    margin: 0.1em;
+    padding-right: 0.1em;
+    min-height: 1.5em;
+}
+
+.datatable-title-bar > span {
+    padding: 0.1em;
+    color: azure;
+    margin-left: 0.5em;
+}
+
+.datatable-plugin-wrap {
+    padding: 0.5em;
+}
+
+.datatable-plugin-wrap #about-tools {
+    margin-left: 1em;
+}
+
+/* keep habr's images in check*/
+table#rssData img {
+    max-width: 450px;
+    max-height: 450px;
+}
+
+/* something was supposed to be also in common for all views based on _Layout but is not */
+.page-rendered-view {
+    display: inline-flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.page-rendered-view > div {
+    display: inline-flex !important;
+    flex-direction: row;
+}
+
+/* somthing for those radiobuttons & select */
+div.datatable-control-aids {
+    padding: 0.5em;
+    display: flex !important;
+    flex-direction: column;
+    min-height: 2.5em;
+}
+
+div.datatable-control-aids > div:first-child span {
+    margin-right: 0.25em;
+}
+
+div.datatable-control-aids > div:last-child {
+    display: inline-flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+
+div.datatable-control-aids > div:last-child > div {
+    margin-right: 1em;
+}

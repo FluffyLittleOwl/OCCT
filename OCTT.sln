@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1385032C-62FB-4BC7-ACC6-8BB66B27A5E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCTT.Domain", "OCTT.Domain\OCTT.Domain.csproj", "{1EA83046-DD01-4084-90BE-3639D55BD71D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCTT.RSSReader", "OCTT.RSSReader\OCTT.RSSReader.csproj", "{2B405307-F975-437B-9753-8ABCC7FFE41C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OCTT.Web", "OCTT.Web\OCTT.Web.csproj", "{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA83046-DD01-4084-90BE-3639D55BD71D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA83046-DD01-4084-90BE-3639D55BD71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA83046-DD01-4084-90BE-3639D55BD71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA83046-DD01-4084-90BE-3639D55BD71D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B405307-F975-437B-9753-8ABCC7FFE41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B405307-F975-437B-9753-8ABCC7FFE41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B405307-F975-437B-9753-8ABCC7FFE41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B405307-F975-437B-9753-8ABCC7FFE41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1EA83046-DD01-4084-90BE-3639D55BD71D} = {1385032C-62FB-4BC7-ACC6-8BB66B27A5E1}
+		{2B405307-F975-437B-9753-8ABCC7FFE41C} = {1385032C-62FB-4BC7-ACC6-8BB66B27A5E1}
+		{21B61EDA-8F4C-45AB-9E11-2F465AFEB4AA} = {1385032C-62FB-4BC7-ACC6-8BB66B27A5E1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88E72062-32E8-4A21-89A0-32E1C1D297FD}
+	EndGlobalSection
+EndGlobal
